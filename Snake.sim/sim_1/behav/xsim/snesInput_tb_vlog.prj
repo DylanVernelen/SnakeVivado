@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Snake.srcs/sources_1/bd/snake/ipshared/ec67/hdl" --include "../../../../Snake.srcs/sources_1/bd/snake/ipshared/02c8/hdl/verilog" --include "../../../../Snake.srcs/sources_1/bd/snake/ipshared/b193/hdl" --include "../../../../Snake.srcs/sources_1/bd/snake/ipshared/4903" --include "C:/Xilinx/Vivado/2018.1/data/xilinx_vip/include" \
+"../../../../Snake.srcs/sources_1/new/SNES_input.v" \
+"../../../../Snake.srcs/sim_1/new/snesInput_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

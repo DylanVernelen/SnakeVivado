@@ -1,0 +1,325 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Dec  6 18:26:48 2020
+# Process ID: 11696
+# Current directory: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_SNES_0_0_synth_1
+# Command line: vivado.exe -log snake_SNES_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_SNES_0_0.tcl
+# Log file: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_SNES_0_0_synth_1/snake_SNES_0_0.vds
+# Journal file: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_SNES_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source snake_SNES_0_0.tcl -notrace
+Command: synth_design -top snake_SNES_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10332 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 370.016 ; gain = 104.918
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'snake_SNES_0_0' [c:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/ip/snake_SNES_0_0/synth/snake_SNES_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'SNES' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SNES_clock_divider' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_clock_divider.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SNES_clock_divider' (1#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'SNES_input' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:23]
+	Parameter IDLE bound to: 2'b00 
+	Parameter LATCHING bound to: 2'b01 
+	Parameter READING bound to: 2'b11 
+	Parameter OUTPUT bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:55]
+WARNING: [Synth 8-567] referenced signal 'tempData' should be on the sensitivity list [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:65]
+WARNING: [Synth 8-567] referenced signal 'buttons' should be on the sensitivity list [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'SNES_input' (2#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'SNES' (3#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'snake_SNES_0_0' (4#1) [c:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/ip/snake_SNES_0_0/synth/snake_SNES_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 424.207 ; gain = 159.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 424.207 ; gain = 159.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 424.207 ; gain = 159.109
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 767.871 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 767.871 ; gain = 502.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 767.871 ; gain = 502.773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 767.871 ; gain = 502.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'SNES_input'
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:56]
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "SNESlatch" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buttons" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                               00
+                LATCHING |                             0010 |                               01
+                 READING |                             0100 |                               11
+                  OUTPUT |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'one-hot' in module 'SNES_input'
+WARNING: [Synth 8-327] inferring latch for variable 'buttons_reg' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/SNES_input.v:69]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 767.871 ; gain = 502.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SNES_clock_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module SNES_input 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     16 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 767.871 ; gain = 502.773
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:08 . Memory (MB): peak = 770.738 ; gain = 505.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:08 . Memory (MB): peak = 770.813 ; gain = 505.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:09 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    28|
+|2     |LUT1   |     2|
+|3     |LUT2   |    87|
+|4     |LUT3   |     2|
+|5     |LUT4   |     1|
+|6     |LUT5   |     3|
+|7     |LUT6   |    16|
+|8     |FDCE   |     3|
+|9     |FDPE   |     1|
+|10    |FDRE   |    89|
+|11    |FDSE   |     1|
+|12    |LD     |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+-------------------+------+
+|      |Instance       |Module             |Cells |
++------+---------------+-------------------+------+
+|1     |top            |                   |   249|
+|2     |  inst         |SNES               |   249|
+|3     |    snesClkDiv |SNES_clock_divider |   175|
+|4     |    snesInput  |SNES_input         |    74|
++------+---------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:50 . Memory (MB): peak = 790.566 ; gain = 181.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 790.566 ; gain = 525.469
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:16 . Memory (MB): peak = 791.207 ; gain = 538.984
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_SNES_0_0_synth_1/snake_SNES_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_SNES_0_0_synth_1/snake_SNES_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file snake_SNES_0_0_utilization_synth.rpt -pb snake_SNES_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 791.207 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  6 18:28:24 2020...

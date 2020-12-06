@@ -1,0 +1,1 @@
+-wto "6741b38711d9461ea6b5cec7b0f39d31" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "snesInput_tb_behav" "xil_defaultlib.snesInput_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
