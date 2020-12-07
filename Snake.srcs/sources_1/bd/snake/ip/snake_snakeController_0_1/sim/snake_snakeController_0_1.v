@@ -84,7 +84,7 @@ input wire d;
     .DOWN(2'B01),
     .LEFT(2'B11),
     .RIGHT(2'B10),
-    .maxLength(480)
+    .maxLength(128)
   ) inst (
     .data(data),
     .clk(clk),

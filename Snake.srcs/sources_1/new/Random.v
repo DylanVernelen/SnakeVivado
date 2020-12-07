@@ -20,17 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Random(pclk,randX,randY,playWidthBlocks, playHeightBlocks);
+module Random(clk,randX,randY,playWidthBlocks, playHeightBlocks);
 
-    input pclk;
-    input [7:0]  playWidthBlocks, playHeightBlocks;
-    output reg [7:0] randX=0;
-    output reg [7:0] randY=0;
+    input clk;
+    input [5:0] playWidthBlocks;
+    input [4:0] playHeightBlocks;
+    output reg [5:0] randX=0;
+    output reg [4:0] randY=0;
     
-    reg [7:0] i = 0;
-    reg [7:0] j = 0;
+    reg [5:0] i = 0;
+    reg [4:0] j = 0;
     
-    always@(posedge pclk)
+    always@(posedge clk)
     begin
         if(i<playWidthBlocks-1) 
             i <= i + 1;
@@ -38,7 +39,7 @@ module Random(pclk,randX,randY,playWidthBlocks, playHeightBlocks);
             i <= 0;
     end
     
-    always@(posedge pclk)
+    always@(posedge clk)
     begin
         if(j<playHeightBlocks-1)
             j <= j + 1;

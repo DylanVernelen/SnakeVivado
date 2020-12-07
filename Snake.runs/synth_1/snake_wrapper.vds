@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sun Dec  6 18:36:39 2020
-# Process ID: 3360
+# Start of session at: Mon Dec  7 18:34:32 2020
+# Process ID: 21224
 # Current directory: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1
 # Command line: vivado.exe -log snake_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_wrapper.tcl
 # Log file: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/snake_wrapper.vds
@@ -13,39 +13,39 @@ source snake_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dylan/Desktop/vivado/Snake/snake_imports/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:21 . Memory (MB): peak = 268.363 ; gain = 38.305
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 268.684 ; gain = 38.555
 Command: synth_design -top snake_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15740 
+INFO: Helper process launched with PID 12344 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 381.691 ; gain = 105.813
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 380.516 ; gain = 104.313
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'snake_wrapper' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/hdl/snake_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'snake' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/synth/snake.v:13]
-INFO: [Synth 8-6157] synthesizing module 'snake_SNES_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_SNES_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_SNES_0_0' (1#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_SNES_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'snake_buttons_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_buttons_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_buttons_0_0' (2#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_buttons_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'snake_clk_wiz_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'snake_clk_wiz_0_0' (3#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'snake_display_timing_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_display_timing_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_display_timing_0_0' (4#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_display_timing_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'snake_processing_system7_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_processing_system7_0_0' (5#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_SNES_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_SNES_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_SNES_0_0' (1#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_SNES_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_buttons_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_buttons_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_buttons_0_0' (2#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_buttons_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_clk_wiz_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'snake_clk_wiz_0_0' (3#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'snake_display_timing_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_display_timing_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_display_timing_0_0' (4#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_display_timing_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_processing_system7_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_processing_system7_0_0' (5#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'snake_processing_system7_0_0' requires 65 connections, but only 36 given [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/synth/snake.v:157]
-INFO: [Synth 8-6157] synthesizing module 'snake_rgb2dvi_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_rgb2dvi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_rgb2dvi_0_0' (6#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_rgb2dvi_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'snake_showOnLED_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_showOnLED_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_showOnLED_0_0' (7#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_showOnLED_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'snake_snakeController_0_1' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_snakeController_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'snake_snakeController_0_1' (8#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-3360-LAPTOP-7IRJGVEJ/realtime/snake_snakeController_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_rgb2dvi_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_rgb2dvi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_rgb2dvi_0_0' (6#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_rgb2dvi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_showOnLED_0_0' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_showOnLED_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_showOnLED_0_0' (7#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_showOnLED_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'snake_snakeController_0_1' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_snakeController_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'snake_snakeController_0_1' (8#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/.Xil/Vivado-21224-LAPTOP-7IRJGVEJ/realtime/snake_snakeController_0_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'snake' (9#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/synth/snake.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'snake_wrapper' (10#1) [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/hdl/snake_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.910 ; gain = 161.031
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.027 ; gain = 159.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -58,10 +58,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.910 ; gain = 161.031
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.027 ; gain = 159.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.910 ; gain = 161.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 436.027 ; gain = 159.824
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -95,16 +95,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 745.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 747.621 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 745.586 ; gain = 469.707
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 747.621 ; gain = 471.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 745.586 ; gain = 469.707
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 747.621 ; gain = 471.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -395,10 +395,10 @@ Applied set_property DONT_TOUCH = true for snake_i/showOnLED_0. (constraint file
 Applied set_property DONT_TOUCH = true for snake_i/buttons_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for snake_i/snakeController_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 745.586 ; gain = 469.707
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 747.621 ; gain = 471.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 745.586 ; gain = 469.707
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 747.621 ; gain = 471.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,7 +434,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 745.586 ; gain = 469.707
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 747.621 ; gain = 471.418
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -451,13 +451,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'snake_i/clk_wiz_0/clk_out
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'snake_i/clk_wiz_0/clk_in1' to 'snake_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 780.188 ; gain = 504.309
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 779.586 ; gain = 503.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 780.188 ; gain = 504.309
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 779.660 ; gain = 503.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -469,7 +469,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 780.188 ; gain = 504.309
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 779.727 ; gain = 503.523
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -493,7 +493,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -506,7 +506,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -518,25 +518,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -580,11 +580,11 @@ Report Instance Areas:
 |2     |  snake_i |snake  |   285|
 +------+----------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.316 ; gain = 505.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 780.855 ; gain = 504.652
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 781.371 ; gain = 196.816
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:55 . Memory (MB): peak = 781.371 ; gain = 505.492
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 780.867 ; gain = 193.070
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 780.867 ; gain = 504.664
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -596,8 +596,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 40 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:01 . Memory (MB): peak = 800.977 ; gain = 532.613
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:57 . Memory (MB): peak = 802.465 ; gain = 533.781
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/synth_1/snake_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file snake_wrapper_utilization_synth.rpt -pb snake_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 801.234 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Dec  6 18:38:09 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 802.684 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  7 18:35:56 2020...
