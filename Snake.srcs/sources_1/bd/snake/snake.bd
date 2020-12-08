@@ -956,12 +956,18 @@
         <spirit:externalPortReference spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="showOnLED_0" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="SNES_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="buttons_0" spirit:portRef="reset"/>
         <spirit:internalPortReference spirit:componentRef="snakeController_0" spirit:portRef="reset"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_RESET0_N"/>
         <spirit:internalPortReference spirit:componentRef="rgb2dvi_0" spirit:portRef="aRst_n"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>buttons_0_pause</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="buttons_0" spirit:portRef="pause"/>
+        <spirit:internalPortReference spirit:componentRef="snakeController_0" spirit:portRef="pause"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

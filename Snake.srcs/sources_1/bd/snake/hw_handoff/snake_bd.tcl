@@ -1029,12 +1029,13 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net rgb2dvi_0_TMDS [get_bd_intf_ports TMDS_0] [get_bd_intf_pins rgb2dvi_0/TMDS]
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_ports reset] [get_bd_pins SNES_0/reset] [get_bd_pins showOnLED_0/reset] [get_bd_pins snakeController_0/reset]
+  connect_bd_net -net Net [get_bd_ports reset] [get_bd_pins SNES_0/reset] [get_bd_pins buttons_0/reset] [get_bd_pins showOnLED_0/reset] [get_bd_pins snakeController_0/reset]
   connect_bd_net -net SNES_0_buttons [get_bd_pins SNES_0/buttons] [get_bd_pins buttons_0/buttons] [get_bd_pins showOnLED_0/buttons]
   connect_bd_net -net SNES_0_snesClock [get_bd_ports snesClock] [get_bd_pins SNES_0/snesClock]
   connect_bd_net -net SNES_0_snesLatch [get_bd_ports snesLatch] [get_bd_pins SNES_0/snesLatch]
   connect_bd_net -net buttons_0_down [get_bd_pins buttons_0/down] [get_bd_pins snakeController_0/d]
   connect_bd_net -net buttons_0_left [get_bd_pins buttons_0/left] [get_bd_pins snakeController_0/l]
+  connect_bd_net -net buttons_0_pause [get_bd_pins buttons_0/pause] [get_bd_pins snakeController_0/pause]
   connect_bd_net -net buttons_0_right [get_bd_pins buttons_0/right] [get_bd_pins snakeController_0/r]
   connect_bd_net -net buttons_0_up [get_bd_pins buttons_0/up] [get_bd_pins snakeController_0/u]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins display_timing_0/pclk] [get_bd_pins rgb2dvi_0/PixelClk] [get_bd_pins snakeController_0/clk]

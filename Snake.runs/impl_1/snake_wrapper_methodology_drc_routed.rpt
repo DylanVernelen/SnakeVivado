@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Dec  7 18:41:27 2020
+| Date         : Tue Dec  8 12:29:37 2020
 | Host         : LAPTOP-7IRJGVEJ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file snake_wrapper_methodology_drc_routed.rpt -pb snake_wrapper_methodology_drc_routed.pb -rpx snake_wrapper_methodology_drc_routed.rpx
 | Design       : snake_wrapper
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 230
+             Violations found: 151
 +-----------+----------+----------------------------------------------------+------------+
 | Rule      | Severity | Description                                        | Violations |
 +-----------+----------+----------------------------------------------------+------------+
 | TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-16 | Warning  | Large setup violation                              | 125        |
-| TIMING-17 | Warning  | Non-clocked sequential cell                        | 94         |
-| TIMING-20 | Warning  | Non-clocked latch                                  | 8          |
+| TIMING-16 | Warning  | Large setup violation                              | 41         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                        | 97         |
+| TIMING-20 | Warning  | Non-clocked latch                                  | 10         |
 | TIMING-27 | Warning  | Invalid primary clock on hierarchical pin          | 1          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects        | 1          |
 +-----------+----------+----------------------------------------------------+------------+
@@ -44,627 +44,207 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.006 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[21][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -38.798 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snake_reg/D (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.006 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[21][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -39.775 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/gameOver_reg/D (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.006 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[21][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -39.887 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.008 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[66][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -39.887 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomY_reg[0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.008 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[66][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.022 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomY_reg[2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.015 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[52][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.022 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomY_reg[3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.015 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[66][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.303 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][4]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -1.020 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.712 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -1.028 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.712 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -1.028 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.712 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -1.028 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.712 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomX_reg[5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.028 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[86][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.745 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomY_reg[1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.044 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[88][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -40.745 ns between snake_i/snakeController_0/inst/snakeX2_reg[3][5]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/randomY_reg[4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -1.044 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[88][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -61.294 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/update_reg/D (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -1.056 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[46][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.097 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[16]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -1.069 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/size_reg[5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.097 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[17]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -1.078 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[26][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.097 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[18]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.097 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[19]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -1.079 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.225 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[10]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -1.085 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.225 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[11]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -1.085 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[51][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.225 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[8]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -1.096 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[51][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.225 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[9]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -1.096 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[51][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.235 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[20]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -1.110 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[50][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.235 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[21]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -1.110 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[50][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.235 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[22]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -1.110 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[50][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.235 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[23]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -1.110 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[50][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.363 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[24]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -1.110 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[6][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.363 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[25]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -1.111 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[73][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.363 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[26]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -1.111 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[73][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.378 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[12]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -1.111 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[73][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.378 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[13]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -1.111 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[73][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.378 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[14]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -1.115 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.378 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[15]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -1.115 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.394 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[0]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -1.125 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.394 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[1]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -1.132 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[52][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.394 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[2]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -1.132 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[52][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.394 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[3]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -1.136 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[2][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.531 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[4]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -1.136 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[2][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.531 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[5]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -1.147 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[77][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.531 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[6]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -1.157 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[52][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#42 Warning
-Large setup violation  
-There is a large setup violation of -1.185 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[31][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#43 Warning
-Large setup violation  
-There is a large setup violation of -1.193 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[27][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#44 Warning
-Large setup violation  
-There is a large setup violation of -1.199 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[27][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#45 Warning
-Large setup violation  
-There is a large setup violation of -1.201 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[46][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#46 Warning
-Large setup violation  
-There is a large setup violation of -1.212 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[52][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#47 Warning
-Large setup violation  
-There is a large setup violation of -1.217 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[65][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#48 Warning
-Large setup violation  
-There is a large setup violation of -1.217 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[65][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#49 Warning
-Large setup violation  
-There is a large setup violation of -1.217 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[65][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#50 Warning
-Large setup violation  
-There is a large setup violation of -1.235 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[73][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#51 Warning
-Large setup violation  
-There is a large setup violation of -1.235 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[73][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#52 Warning
-Large setup violation  
-There is a large setup violation of -1.241 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[51][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#53 Warning
-Large setup violation  
-There is a large setup violation of -1.245 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[27][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#54 Warning
-Large setup violation  
-There is a large setup violation of -1.247 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/size_reg[3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#55 Warning
-Large setup violation  
-There is a large setup violation of -1.250 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[51][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#56 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[92][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#57 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[92][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#58 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[92][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#59 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[15][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#60 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[67][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#61 Warning
-Large setup violation  
-There is a large setup violation of -1.256 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[67][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#62 Warning
-Large setup violation  
-There is a large setup violation of -1.257 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[65][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#63 Warning
-Large setup violation  
-There is a large setup violation of -1.257 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[65][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#64 Warning
-Large setup violation  
-There is a large setup violation of -1.265 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[77][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#65 Warning
-Large setup violation  
-There is a large setup violation of -1.266 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[67][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#66 Warning
-Large setup violation  
-There is a large setup violation of -1.290 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[25][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#67 Warning
-Large setup violation  
-There is a large setup violation of -1.290 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[25][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#68 Warning
-Large setup violation  
-There is a large setup violation of -1.317 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[43][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#69 Warning
-Large setup violation  
-There is a large setup violation of -1.317 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[43][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#70 Warning
-Large setup violation  
-There is a large setup violation of -1.322 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[31][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#71 Warning
-Large setup violation  
-There is a large setup violation of -1.322 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[31][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#72 Warning
-Large setup violation  
-There is a large setup violation of -1.340 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#73 Warning
-Large setup violation  
-There is a large setup violation of -1.341 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[52][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#74 Warning
-Large setup violation  
-There is a large setup violation of -1.386 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[73][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#75 Warning
-Large setup violation  
-There is a large setup violation of -1.399 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[65][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#76 Warning
-Large setup violation  
-There is a large setup violation of -1.401 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[67][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#77 Warning
-Large setup violation  
-There is a large setup violation of -1.406 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[6][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#78 Warning
-Large setup violation  
-There is a large setup violation of -1.415 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[43][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#79 Warning
-Large setup violation  
-There is a large setup violation of -1.443 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[28][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#80 Warning
-Large setup violation  
-There is a large setup violation of -1.443 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[28][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#81 Warning
-Large setup violation  
-There is a large setup violation of -1.453 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[26][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#82 Warning
-Large setup violation  
-There is a large setup violation of -1.460 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[73][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#83 Warning
-Large setup violation  
-There is a large setup violation of -1.479 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[52][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#84 Warning
-Large setup violation  
-There is a large setup violation of -1.479 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[52][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#85 Warning
-Large setup violation  
-There is a large setup violation of -1.479 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[52][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#86 Warning
-Large setup violation  
-There is a large setup violation of -1.492 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[66][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#87 Warning
-Large setup violation  
-There is a large setup violation of -1.492 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[66][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#88 Warning
-Large setup violation  
-There is a large setup violation of -1.493 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[66][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#89 Warning
-Large setup violation  
-There is a large setup violation of -1.544 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#90 Warning
-Large setup violation  
-There is a large setup violation of -1.550 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[51][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#91 Warning
-Large setup violation  
-There is a large setup violation of -1.564 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[27][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#92 Warning
-Large setup violation  
-There is a large setup violation of -1.567 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[67][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#93 Warning
-Large setup violation  
-There is a large setup violation of -1.568 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#94 Warning
-Large setup violation  
-There is a large setup violation of -1.568 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#95 Warning
-Large setup violation  
-There is a large setup violation of -1.568 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#96 Warning
-Large setup violation  
-There is a large setup violation of -1.580 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[73][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#97 Warning
-Large setup violation  
-There is a large setup violation of -1.667 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[79][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#98 Warning
-Large setup violation  
-There is a large setup violation of -1.678 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[6][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#99 Warning
-Large setup violation  
-There is a large setup violation of -1.709 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[67][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#100 Warning
-Large setup violation  
-There is a large setup violation of -1.709 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[67][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#101 Warning
-Large setup violation  
-There is a large setup violation of -1.710 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#102 Warning
-Large setup violation  
-There is a large setup violation of -1.710 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#103 Warning
-Large setup violation  
-There is a large setup violation of -1.710 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#104 Warning
-Large setup violation  
-There is a large setup violation of -1.710 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[61][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#105 Warning
-Large setup violation  
-There is a large setup violation of -1.748 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[28][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#106 Warning
-Large setup violation  
-There is a large setup violation of -1.748 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[28][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#107 Warning
-Large setup violation  
-There is a large setup violation of -1.751 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[61][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#108 Warning
-Large setup violation  
-There is a large setup violation of -1.852 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#109 Warning
-Large setup violation  
-There is a large setup violation of -1.852 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[79][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#110 Warning
-Large setup violation  
-There is a large setup violation of -1.866 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][5]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#111 Warning
-Large setup violation  
-There is a large setup violation of -1.889 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[67][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#112 Warning
-Large setup violation  
-There is a large setup violation of -1.916 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[61][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#113 Warning
-Large setup violation  
-There is a large setup violation of -1.916 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[61][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#114 Warning
-Large setup violation  
-There is a large setup violation of -1.916 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[61][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#115 Warning
-Large setup violation  
-There is a large setup violation of -1.931 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[28][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#116 Warning
-Large setup violation  
-There is a large setup violation of -1.940 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#117 Warning
-Large setup violation  
-There is a large setup violation of -1.940 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[61][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#118 Warning
-Large setup violation  
-There is a large setup violation of -2.004 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeY2_reg[73][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#119 Warning
-Large setup violation  
-There is a large setup violation of -2.036 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][2]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#120 Warning
-Large setup violation  
-There is a large setup violation of -2.078 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][0]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#121 Warning
-Large setup violation  
-There is a large setup violation of -2.078 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][1]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#122 Warning
-Large setup violation  
-There is a large setup violation of -2.078 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][3]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#123 Warning
-Large setup violation  
-There is a large setup violation of -2.078 ns between snake_i/display_timing_0/inst/y_reg[6]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snakeX2_reg[77][4]/CE (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#124 Warning
-Large setup violation  
-There is a large setup violation of -23.649 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][2]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/snake_reg/D (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#125 Warning
-Large setup violation  
-There is a large setup violation of -23.985 ns between snake_i/snakeController_0/inst/snakeX2_reg[1][2]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/data_reg[7]/D (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -62.531 ns between snake_i/snakeController_0/inst/speed_reg[0]/C (clocked by clk_out1_snake_clk_wiz_0_0) and snake_i/snakeController_0/inst/updateCounter_reg[7]/R (clocked by clk_out1_snake_clk_wiz_0_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -1069,70 +649,85 @@ Related violations: <none>
 
 TIMING-17#81 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[4]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[5]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[6]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#84 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[7]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#85 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[8]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#86 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[9]/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#87 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/buttons_0/inst/down_reg/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#88 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/buttons_0/inst/left_reg/C is not reached by a timing clock
+The clock pin snake_i/SNES_0/inst/snesInput/tempData_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#89 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/buttons_0/inst/right_reg/C is not reached by a timing clock
+The clock pin snake_i/buttons_0/inst/down_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#90 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/buttons_0/inst/up_reg/C is not reached by a timing clock
+The clock pin snake_i/buttons_0/inst/left_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#91 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/showOnLED_0/inst/leds_reg[0]/C is not reached by a timing clock
+The clock pin snake_i/buttons_0/inst/pause_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#92 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/showOnLED_0/inst/leds_reg[1]/C is not reached by a timing clock
+The clock pin snake_i/buttons_0/inst/right_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#93 Warning
 Non-clocked sequential cell  
-The clock pin snake_i/showOnLED_0/inst/leds_reg[2]/C is not reached by a timing clock
+The clock pin snake_i/buttons_0/inst/up_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#94 Warning
+Non-clocked sequential cell  
+The clock pin snake_i/showOnLED_0/inst/leds_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Warning
+Non-clocked sequential cell  
+The clock pin snake_i/showOnLED_0/inst/leds_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Warning
+Non-clocked sequential cell  
+The clock pin snake_i/showOnLED_0/inst/leds_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Warning
 Non-clocked sequential cell  
 The clock pin snake_i/showOnLED_0/inst/leds_reg[3]/C is not reached by a timing clock
 Related violations: <none>
@@ -1149,30 +744,40 @@ Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch snake_i/SNES_0/inst/snesInput/buttons_reg[4] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[4]/G is not reached by a timing clock
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[2] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch snake_i/SNES_0/inst/snesInput/buttons_reg[5] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[5]/G is not reached by a timing clock
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[3] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch snake_i/SNES_0/inst/snesInput/buttons_reg[6] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[6]/G is not reached by a timing clock
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[4] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch snake_i/SNES_0/inst/snesInput/buttons_reg[7] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[7]/G is not reached by a timing clock
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[5] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch snake_i/SNES_0/inst/snesInput/buttons_reg[8] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[8]/G is not reached by a timing clock
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[6] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
+Non-clocked latch  
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[7] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch snake_i/SNES_0/inst/snesInput/buttons_reg[8] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
 Non-clocked latch  
 The latch snake_i/SNES_0/inst/snesInput/buttons_reg[9] cannot be properly analyzed as its control pin snake_i/SNES_0/inst/snesInput/buttons_reg[9]/G is not reached by a timing clock
 Related violations: <none>

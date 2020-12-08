@@ -63,7 +63,8 @@ module snake_snakeController_0_1 (
   l,
   r,
   u,
-  d
+  d,
+  pause
 );
 
 output wire [23 : 0] data;
@@ -79,6 +80,7 @@ input wire l;
 input wire r;
 input wire u;
 input wire d;
+input wire pause;
 
   snakeController #(
     .UP(2'B00),
@@ -95,6 +97,7 @@ input wire d;
     .l(l),
     .r(r),
     .u(u),
-    .d(d)
+    .d(d),
+    .pause(pause)
   );
 endmodule

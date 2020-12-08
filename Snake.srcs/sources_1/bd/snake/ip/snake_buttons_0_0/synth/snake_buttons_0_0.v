@@ -56,28 +56,36 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module snake_buttons_0_0 (
   clk,
+  reset,
   buttons,
   left,
   right,
   up,
-  down
+  down,
+  pause
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
+input wire reset;
 input wire [15 : 0] buttons;
 output wire left;
 output wire right;
 output wire up;
 output wire down;
+output wire pause;
 
   buttons inst (
     .clk(clk),
+    .reset(reset),
     .buttons(buttons),
     .left(left),
     .right(right),
     .up(up),
-    .down(down)
+    .down(down),
+    .pause(pause)
   );
 endmodule

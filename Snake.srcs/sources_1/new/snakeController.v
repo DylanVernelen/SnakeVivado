@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module snakeController(data,clk ,reset, x, y, ,l ,r ,u ,d);
-    input clk, reset, l, r, u, d, x, y; 
+module snakeController(data,clk ,reset, x, y, ,l ,r ,u ,d, pause);
+    input clk, reset, l, r, u, d, x, y, pause; 
     output reg [23:0] data;
 
     //wire pclk;
@@ -69,7 +69,7 @@ module snakeController(data,clk ,reset, x, y, ,l ,r ,u ,d);
     reg[6:0] size = 0;
     reg[6:0] updateSize = 0;
     reg[6:0] count1;
-    reg[6:0] count2;
+    reg[7:0] count2;
     reg[6:0] count3;
     reg found = 0;
     reg found2 = 0;
@@ -99,107 +99,111 @@ module snakeController(data,clk ,reset, x, y, ,l ,r ,u ,d);
     
     always@(posedge clk)
     begin
-        if(updatetDir==1 && newDirection != direction) begin
-            newDirection <= direction;
-            updatetDir<=0;
-        end
-        
-        if (reset==1 || (border==1 && head==1) || (head==1 && snake==1)) begin
-            gameOver <= 1;
-            randomX <= randX;
-            randomY <= randY;
-        end
-        
-        found = 0;
-        for(count2 = 1; count2 < maxLength-1; count2 = count2 + 1) begin
-            if(found==0 && count2<=size) begin                
-                snake = ((x >= snakeX2[count2]*blokSize+blokBorder && x < (snakeX2[count2]+1)*blokSize-blokBorder) && (y>= snakeY2[count2]*blokSize+blokBorder && y < (snakeY2[count2]+1)*blokSize-blokBorder));
-                found = snake;
-            end
-        end
-        //snake <= ((x >= snakeX2[0]+blokBorder & x < snakeX2[0]+blokSize-blokBorder) & (y>= snakeY2[0]+blokBorder & y < snakeY2[0]+blokSize-blokBorder));
-        //found = snake;
-        
-        if((apple & head) && needNewApple)begin
-            /*found2 = 0;
-            for(count3 = 0; count3 < maxLength-1; count3 = count3 + 1) begin
-                if(found2==0 && count3<=size) begin                
-                    found2 = ((randX+offsetBlocks+borderBlocks == snakeX2[count3]) && (randY+offsetBlocks+borderBlocks == snakeY2[count3]));
-                    //found2 = snake;
-                end
-            end
-            if(found2==0) needNewApple <=0;*/
-            randomX <= randX;
-            randomY <= randY;
-            
-            appleInHead <= 1;
-        end
-        
+    
         if(border==1) begin data[23:0] <= borderColor; end
         else if (head==1) begin data[23:0] <= headColor; end
         else if (apple==1) begin data[23:0] <= appleColor; end
         else if (snake==1) begin data[23:0] <= snakeColor; end
         else begin data[23:0] <= 24'h000000; end
         
-        updateCounter <= updateCounter + 1;
-        if(updateCounter>=47619047/speed) begin
-            update <= 1;
-            updateCounter <= 0;
+        found = 0;
+        for(count2 = 1; count2 < maxLength; count2 = count2 + 1) begin
+            if(found==0 && count2<=size) begin                
+                snake = ((x >= snakeX2[count2]*blokSize+blokBorder && x < (snakeX2[count2]+1)*blokSize-blokBorder) && (y>= snakeY2[count2]*blokSize+blokBorder && y < (snakeY2[count2]+1)*blokSize-blokBorder));
+                found = snake;
+            end
         end
+        
+        if (pause==0||reset==1) begin
+            if(updatetDir==1 && newDirection != direction) begin
+                newDirection <= direction;
+                updatetDir<=0;
+            end
+            
+            if (reset==1 || (border==1 && head==1) || (head==1 && snake==1)) begin
+                gameOver <= 1;
+                randomX <= randX;
+                randomY <= randY;
+            end
+            
+            //snake <= ((x >= snakeX2[0]+blokBorder & x < snakeX2[0]+blokSize-blokBorder) & (y>= snakeY2[0]+blokBorder & y < snakeY2[0]+blokSize-blokBorder));
+            //found = snake;
+            
+            if((apple & head) && needNewApple)begin
+                /*found2 = 0;
+                for(count3 = 0; count3 < maxLength-1; count3 = count3 + 1) begin
+                    if(found2==0 && count3<=size) begin                
+                        found2 = ((randX+offsetBlocks+borderBlocks == snakeX2[count3]) && (randY+offsetBlocks+borderBlocks == snakeY2[count3]));
+                        //found2 = snake;
+                    end
+                end
+                if(found2==0) needNewApple <=0;*/
+                randomX <= randX;
+                randomY <= randY;
                 
-        if(animate==1) begin
-            if (gameOver == 1)begin
-                appleX <= randomX+offsetBlocks+borderBlocks;
-                appleY <= randomY+offsetBlocks+borderBlocks;
-                snakeX2[0] <= 15;
-                snakeY2[0] <= 9;
-                updateSize <= 0;
-                gameOver <= 0;
+                appleInHead <= 1;
             end
             
-            if (appleInHead == 1) begin
-                //appleX <= randX;
-                //appleY <= randY;
-                appleX <= randomX+offsetBlocks+borderBlocks;
-                appleY <= randomY+offsetBlocks+borderBlocks;
-                if(updateSize == maxLength)begin
-                    updateSize<=0;
-                    speed <= speed + 1;
-                end
-                else updateSize <= updateSize + 1;
-                needNewApple <=1;
-                appleInHead <= 0;
+            updateCounter <= updateCounter + 1;
+            if(updateCounter>=47619047/speed) begin
+                update <= 1;
+                updateCounter <= 0;
             end
-        end
-        
-        
-        if(update == 1 && animate == 1) begin
-            size=updateSize;
-            for(count1=maxLength-1; count1>0; count1 = count1 - 1) begin
-                if(count1<=size) begin                
-                    snakeX2[count1] <= snakeX2[count1 - 1];
-                    snakeY2[count1] <= snakeY2[count1 - 1];
+                    
+            if(animate==1) begin
+                if (gameOver == 1)begin
+                    appleX <= randomX+offsetBlocks+borderBlocks;
+                    appleY <= randomY+offsetBlocks+borderBlocks;
+                    snakeX2[0] <= 15;
+                    snakeY2[0] <= 9;
+                    updateSize <= 0;
+                    speed<=4;
+                    gameOver <= 0;
+                end
+                
+                if (appleInHead == 1) begin
+                    //appleX <= randX;
+                    //appleY <= randY;
+                    appleX <= randomX+offsetBlocks+borderBlocks;
+                    appleY <= randomY+offsetBlocks+borderBlocks;
+                    if(updateSize == maxLength-1)begin
+                        updateSize<=0;
+                        speed <= speed + 1;
+                    end
+                    else updateSize <= updateSize + 1;
+                    needNewApple <=1;
+                    appleInHead <= 0;
                 end
             end
-            case(newDirection)
-                UP: begin snakeY2[0]<=snakeY2[0]-1; end
-                DOWN: begin snakeY2[0]<=snakeY2[0]+1; end
-                LEFT: begin snakeX2[0]<=snakeX2[0]-1; end
-                RIGHT: begin snakeX2[0]<=snakeX2[0]+1; end
-            endcase
-            updatetDir<=1;
-            /*case(direction)
-                UP: begin snakeY<=snakeY-blokSize; end
-                DOWN: begin snakeY<=snakeY+blokSize; end
-                LEFT: begin snakeX<=snakeX-blokSize; end
-                RIGHT: begin snakeX<=snakeX+blokSize; end
-            endcase*/
             
-                        
-            update <= 0;
-        end
-        
-        
+            
+            if(update == 1 && animate == 1) begin
+                size=updateSize;
+                for(count1=maxLength-1; count1>0; count1 = count1 - 1) begin
+                    if(count1<=size) begin                
+                        snakeX2[count1] <= snakeX2[count1 - 1];
+                        snakeY2[count1] <= snakeY2[count1 - 1];
+                    end
+                end
+                case(newDirection)
+                    UP: begin snakeY2[0]<=snakeY2[0]-1; end
+                    DOWN: begin snakeY2[0]<=snakeY2[0]+1; end
+                    LEFT: begin snakeX2[0]<=snakeX2[0]-1; end
+                    RIGHT: begin snakeX2[0]<=snakeX2[0]+1; end
+                endcase
+                updatetDir<=1;
+                /*case(direction)
+                    UP: begin snakeY<=snakeY-blokSize; end
+                    DOWN: begin snakeY<=snakeY+blokSize; end
+                    LEFT: begin snakeX<=snakeX-blokSize; end
+                    RIGHT: begin snakeX<=snakeX+blokSize; end
+                endcase*/
+                
+                            
+                update <= 0;
+            end
+            
+        end    
     end
     
 endmodule

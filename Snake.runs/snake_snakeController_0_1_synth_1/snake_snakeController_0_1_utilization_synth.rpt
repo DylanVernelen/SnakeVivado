@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Dec  7 18:34:23 2020
+| Date         : Tue Dec  8 12:19:04 2020
 | Host         : LAPTOP-7IRJGVEJ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file snake_snakeController_0_1_utilization_synth.rpt -pb snake_snakeController_0_1_utilization_synth.pb
 | Design       : snake_snakeController_0_1
@@ -27,18 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 9721 |     0 |     53200 | 18.27 |
-|   LUT as Logic          | 9721 |     0 |     53200 | 18.27 |
-|   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         | 1483 |     0 |    106400 |  1.39 |
-|   Register as Flip Flop | 1483 |     0 |    106400 |  1.39 |
-|   Register as Latch     |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                |    0 |     0 |     26600 |  0.00 |
-| F8 Muxes                |    0 |     0 |     13300 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
++-------------------------+-------+-------+-----------+-------+
+|        Site Type        |  Used | Fixed | Available | Util% |
++-------------------------+-------+-------+-----------+-------+
+| Slice LUTs*             | 10717 |     0 |     53200 | 20.14 |
+|   LUT as Logic          | 10717 |     0 |     53200 | 20.14 |
+|   LUT as Memory         |     0 |     0 |     17400 |  0.00 |
+| Slice Registers         |  1526 |     0 |    106400 |  1.43 |
+|   Register as Flip Flop |  1526 |     0 |    106400 |  1.43 |
+|   Register as Latch     |     0 |     0 |    106400 |  0.00 |
+| F7 Muxes                |     0 |     0 |     26600 |  0.00 |
+| F8 Muxes                |     0 |     0 |     13300 |  0.00 |
++-------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 1479  |          Yes |       Reset |            - |
+| 1522  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,14 +146,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 3266 |                 LUT |
-| LUT4     | 2886 |                 LUT |
-| LUT5     | 2687 |                 LUT |
-| CARRY4   | 2185 |          CarryLogic |
-| LUT6     | 2176 |                 LUT |
-| LUT1     | 1671 |                 LUT |
-| LUT3     | 1482 |                 LUT |
-| FDRE     | 1479 |        Flop & Latch |
+| LUT2     | 3350 |                 LUT |
+| LUT4     | 2939 |                 LUT |
+| LUT5     | 2754 |                 LUT |
+| CARRY4   | 2448 |          CarryLogic |
+| LUT3     | 2283 |                 LUT |
+| LUT6     | 2206 |                 LUT |
+| LUT1     | 1724 |                 LUT |
+| FDRE     | 1522 |        Flop & Latch |
 | FDSE     |    4 |        Flop & Latch |
 +----------+------+---------------------+
 

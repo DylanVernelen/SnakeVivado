@@ -20,25 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module buttons(clk, buttons, left, right, up, down);
-    input clk;
+module buttons(clk, reset, buttons, left, right, up, down, pause);
+    input clk, reset;
     input [15:0] buttons;
-    output reg left, right, up, down;
+    output reg left, right, up, down, pause=0;
     
     always@(posedge clk)
     begin
-        if (buttons[0] == 1 || buttons[5] == 1) begin // B of pijltje onder indrukken
-            down <= 1'b1; left <= 0; up <= 0; right <= 0;
-        end
-        if (buttons[1] == 1 || buttons[6] == 1) begin//Y of linkspijltje
-            left <= 1'b1; down <= 0; up <= 0; right <= 0;
-        end
-        if (buttons[4] == 1 || buttons[9] == 1) begin// X of bovenpijltje
-            up <= 1'b1; left <= 0; down <= 0; right <= 0;
-        end 
-        if (buttons[7] == 1 || buttons[8] == 1) begin// A of rechts
-            right <= 1'b1; left <= 0; up <= 0; down <= 0;
-        end
+        if(reset==1) pause <= 0;
+        if(pause==0)begin
+            if (buttons[0] == 1 || buttons[5] == 1) begin // B of pijltje onder indrukken
+                down <= 1'b1; left <= 0; up <= 0; right <= 0;
+            end
+            if (buttons[1] == 1 || buttons[6] == 1) begin//Y of linkspijltje
+                left <= 1'b1; down <= 0; up <= 0; right <= 0;
+            end
+            if (buttons[4] == 1 || buttons[9] == 1) begin// X of bovenpijltje
+                up <= 1'b1; left <= 0; down <= 0; right <= 0;
+            end 
+            if (buttons[7] == 1 || buttons[8] == 1) begin// A of rechts
+                right <= 1'b1; left <= 0; up <= 0; down <= 0;
+            end
+            if(buttons[2]==1) pause<=1;
+        end else if(buttons[3]==1) pause<=0;
+        
     end
         
 endmodule

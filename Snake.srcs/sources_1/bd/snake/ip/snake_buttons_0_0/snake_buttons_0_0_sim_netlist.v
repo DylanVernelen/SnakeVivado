@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Mon Dec  7 17:07:36 2020
+// Date        : Tue Dec  8 12:03:35 2020
 // Host        : LAPTOP-7IRJGVEJ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/ip/snake_buttons_0_0/snake_buttons_0_0_sim_netlist.v
@@ -16,74 +16,98 @@
 (* NotValidForBitStream *)
 module snake_buttons_0_0
    (clk,
+    reset,
     buttons,
     left,
     right,
     up,
-    down);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
+    down,
+    pause);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW" *) input reset;
   input [15:0]buttons;
   output left;
   output right;
   output up;
   output down;
+  output pause;
 
   wire [15:0]buttons;
   wire clk;
   wire down;
   wire left;
+  wire pause;
+  wire reset;
   wire right;
   wire up;
 
   snake_buttons_0_0_buttons inst
-       (.buttons({buttons[9:4],buttons[1:0]}),
+       (.buttons(buttons[9:0]),
         .clk(clk),
         .down(down),
         .left(left),
+        .pause(pause),
+        .reset(reset),
         .right(right),
         .up(up));
 endmodule
 
 (* ORIG_REF_NAME = "buttons" *) 
 module snake_buttons_0_0_buttons
-   (left,
+   (pause,
     down,
+    left,
     up,
     right,
     buttons,
+    reset,
     clk);
-  output left;
+  output pause;
   output down;
+  output left;
   output up;
   output right;
-  input [7:0]buttons;
+  input [9:0]buttons;
+  input reset;
   input clk;
 
-  wire [7:0]buttons;
+  wire [9:0]buttons;
   wire clk;
   wire down;
-  wire down02_out;
   wire down1;
-  wire down17_out;
   wire down_i_1_n_0;
+  wire down_i_2_n_0;
   wire left;
   wire left_i_1_n_0;
+  wire left_i_2_n_0;
+  wire pause;
+  wire pause_i_1_n_0;
+  wire reset;
   wire right;
+  wire right4_in;
   wire right_i_1_n_0;
-  wire right_i_2_n_0;
   wire up;
   wire up_i_1_n_0;
 
-  LUT6 #(
-    .INIT(64'h00000000000000FE)) 
+  LUT5 #(
+    .INIT(32'hAA00AAFE)) 
     down_i_1
        (.I0(down),
-        .I1(buttons[0]),
-        .I2(buttons[3]),
-        .I3(down1),
-        .I4(down02_out),
-        .I5(down17_out),
+        .I1(buttons[5]),
+        .I2(buttons[0]),
+        .I3(pause),
+        .I4(down_i_2_n_0),
         .O(down_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    down_i_2
+       (.I0(buttons[8]),
+        .I1(buttons[7]),
+        .I2(buttons[1]),
+        .I3(buttons[6]),
+        .I4(buttons[4]),
+        .I5(buttons[9]),
+        .O(down_i_2_n_0));
   FDRE down_reg
        (.C(clk),
         .CE(1'b1),
@@ -91,59 +115,71 @@ module snake_buttons_0_0_buttons
         .Q(down),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h000000000000FF02)) 
+    .INIT(64'h888888888888888A)) 
     left_i_1
-       (.I0(left),
-        .I1(buttons[0]),
-        .I2(buttons[3]),
-        .I3(down02_out),
-        .I4(down1),
-        .I5(down17_out),
+       (.I0(left_i_2_n_0),
+        .I1(pause),
+        .I2(buttons[8]),
+        .I3(buttons[7]),
+        .I4(buttons[9]),
+        .I5(buttons[4]),
         .O(left_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFF10000FFF0)) 
     left_i_2
-       (.I0(buttons[1]),
-        .I1(buttons[4]),
-        .O(down02_out));
-  LUT2 #(
-    .INIT(4'hE)) 
-    left_i_3
-       (.I0(buttons[2]),
-        .I1(buttons[7]),
-        .O(down1));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    left_i_4
-       (.I0(buttons[5]),
-        .I1(buttons[6]),
-        .O(down17_out));
+       (.I0(buttons[0]),
+        .I1(buttons[5]),
+        .I2(buttons[1]),
+        .I3(buttons[6]),
+        .I4(pause),
+        .I5(left),
+        .O(left_i_2_n_0));
   FDRE left_reg
        (.C(clk),
         .CE(1'b1),
         .D(left_i_1_n_0),
         .Q(left),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'hFFF2)) 
+    .INIT(16'h3074)) 
+    pause_i_1
+       (.I0(buttons[3]),
+        .I1(pause),
+        .I2(buttons[2]),
+        .I3(reset),
+        .O(pause_i_1_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    pause_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(pause_i_1_n_0),
+        .Q(pause),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'hAAFFAAFFAAFFAA02)) 
     right_i_1
        (.I0(right),
-        .I1(right_i_2_n_0),
-        .I2(buttons[6]),
-        .I3(buttons[5]),
+        .I1(down1),
+        .I2(right4_in),
+        .I3(pause),
+        .I4(buttons[7]),
+        .I5(buttons[8]),
         .O(right_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     right_i_2
-       (.I0(buttons[7]),
-        .I1(buttons[2]),
-        .I2(buttons[0]),
-        .I3(buttons[3]),
-        .I4(buttons[1]),
-        .I5(buttons[4]),
-        .O(right_i_2_n_0));
+       (.I0(buttons[4]),
+        .I1(buttons[9]),
+        .O(down1));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    right_i_3
+       (.I0(buttons[6]),
+        .I1(buttons[1]),
+        .I2(buttons[5]),
+        .I3(buttons[0]),
+        .O(right4_in));
   FDRE right_reg
        (.C(clk),
         .CE(1'b1),
@@ -151,14 +187,14 @@ module snake_buttons_0_0_buttons
         .Q(right),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h000000000000EEE2)) 
+    .INIT(64'hAA00AA00AA00AACE)) 
     up_i_1
        (.I0(up),
-        .I1(right_i_2_n_0),
-        .I2(buttons[7]),
-        .I3(buttons[2]),
-        .I4(buttons[6]),
-        .I5(buttons[5]),
+        .I1(down1),
+        .I2(right4_in),
+        .I3(pause),
+        .I4(buttons[7]),
+        .I5(buttons[8]),
         .O(up_i_1_n_0));
   FDRE up_reg
        (.C(clk),

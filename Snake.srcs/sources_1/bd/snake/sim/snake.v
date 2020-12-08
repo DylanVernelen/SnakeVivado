@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-//Date        : Mon Dec  7 18:30:38 2020
+//Date        : Tue Dec  8 12:14:03 2020
 //Host        : LAPTOP-7IRJGVEJ running 64-bit major release  (build 9200)
 //Command     : generate_target snake.bd
 //Design      : snake
@@ -80,6 +80,7 @@ module snake
   wire SNES_0_snesLatch;
   wire buttons_0_down;
   wire buttons_0_left;
+  wire buttons_0_pause;
   wire buttons_0_right;
   wire buttons_0_up;
   wire clk_wiz_0_clk_out1;
@@ -142,6 +143,8 @@ module snake
         .clk(sysclk_0_1),
         .down(buttons_0_down),
         .left(buttons_0_left),
+        .pause(buttons_0_pause),
+        .reset(Net),
         .right(buttons_0_right),
         .up(buttons_0_up));
   snake_clk_wiz_0_0 clk_wiz_0
@@ -212,6 +215,7 @@ module snake
         .d(buttons_0_down),
         .data(snakeController_0_data),
         .l(buttons_0_left),
+        .pause(buttons_0_pause),
         .r(buttons_0_right),
         .reset(Net),
         .u(buttons_0_up),
