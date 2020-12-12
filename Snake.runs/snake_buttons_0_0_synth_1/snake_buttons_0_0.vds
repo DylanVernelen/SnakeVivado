@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Dec  8 12:01:46 2020
-# Process ID: 3176
+# Start of session at: Sat Dec 12 15:29:32 2020
+# Process ID: 2060
 # Current directory: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_buttons_0_0_synth_1
 # Command line: vivado.exe -log snake_buttons_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_buttons_0_0.tcl
 # Log file: C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_buttons_0_0_synth_1/snake_buttons_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 476 
+INFO: Helper process launched with PID 11632 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 369.895 ; gain = 104.117
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 370.367 ; gain = 103.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'snake_buttons_0_0' [c:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/bd/snake/ip/snake_buttons_0_0/synth/snake_buttons_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'buttons' [C:/Users/Dylan/Desktop/vivado/Snake/Snake.srcs/sources_1/new/buttons.v:23]
@@ -30,7 +30,7 @@ WARNING: [Synth 8-3331] design buttons has unconnected port buttons[12]
 WARNING: [Synth 8-3331] design buttons has unconnected port buttons[11]
 WARNING: [Synth 8-3331] design buttons has unconnected port buttons[10]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 423.945 ; gain = 158.168
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 424.641 ; gain = 158.051
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -43,10 +43,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 423.945 ; gain = 158.168
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 424.641 ; gain = 158.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 423.945 ; gain = 158.168
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 424.641 ; gain = 158.051
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -58,25 +58,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 743.531 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 744.543 ; gain = 0.180
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 743.531 ; gain = 477.754
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 744.543 ; gain = 477.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 743.531 ; gain = 477.754
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 744.543 ; gain = 477.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 743.531 ; gain = 477.754
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 744.543 ; gain = 477.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 743.531 ; gain = 477.754
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 744.543 ; gain = 477.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,7 +128,7 @@ WARNING: [Synth 8-3331] design snake_buttons_0_0 has unconnected port buttons[12
 WARNING: [Synth 8-3331] design snake_buttons_0_0 has unconnected port buttons[11]
 WARNING: [Synth 8-3331] design snake_buttons_0_0 has unconnected port buttons[10]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 743.531 ; gain = 477.754
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 744.543 ; gain = 477.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,13 +140,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:22 . Memory (MB): peak = 769.441 ; gain = 503.664
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 774.863 ; gain = 508.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:22 . Memory (MB): peak = 769.441 ; gain = 503.664
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 774.863 ; gain = 508.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,7 +158,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:23 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:00 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +182,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +195,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,25 +207,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -256,11 +256,11 @@ Report Instance Areas:
 |2     |  inst   |buttons |    14|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:03 . Memory (MB): peak = 779.512 ; gain = 194.148
-Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:25 . Memory (MB): peak = 779.512 ; gain = 513.734
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 784.930 ; gain = 198.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 784.930 ; gain = 518.340
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -270,9 +270,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 13 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:31 . Memory (MB): peak = 792.117 ; gain = 539.234
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:06 . Memory (MB): peak = 800.078 ; gain = 546.324
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_buttons_0_0_synth_1/snake_buttons_0_0.dcp' has been generated.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Dylan/Desktop/vivado/Snake/Snake.runs/snake_buttons_0_0_synth_1/snake_buttons_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file snake_buttons_0_0_utilization_synth.rpt -pb snake_buttons_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 792.117 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  8 12:03:36 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 800.078 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 12 15:30:54 2020...

@@ -28,7 +28,7 @@ module snakeDirection(clk, l,r,u,d,direction);
     parameter UP=2'b00, DOWN=2'b01, LEFT=2'b11, RIGHT=2'b10;
     
     always@(posedge clk)
-    begin
+    begin   //snake kan geen 180 graden draaien
         if (l == 1 && direction != RIGHT) begin direction <= LEFT; end
         else if (r == 1 && direction != LEFT) begin direction <= RIGHT; end
         else if (u == 1 && direction != DOWN) begin direction <= UP; end

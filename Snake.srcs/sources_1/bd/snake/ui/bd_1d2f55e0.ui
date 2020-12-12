@@ -20,30 +20,30 @@ preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 470 -defaultsOSRD
 preplace inst buttons_0 -pg 1 -lvl 2 -y 440 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 3 -y 500 -defaultsOSRD
 preplace netloc processing_system7_0_DDR 1 3 1 NJ
-preplace netloc snakeController_0_data 1 2 1 670
+preplace netloc snakeController_0_data 1 2 1 680
 preplace netloc display_timing_0_y 1 1 1 310
 preplace netloc sysclk_0_1 1 0 2 20 560 310
-preplace netloc buttons_0_left 1 1 2 340 550 660
+preplace netloc buttons_0_left 1 1 2 340 550 670
 preplace netloc snesData_0_1 1 0 1 N
-preplace netloc buttons_0_up 1 1 2 370 300 640
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 680 170 1090
+preplace netloc buttons_0_up 1 1 2 370 300 650
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 690 170 1100
 preplace netloc SNES_0_snesLatch 1 1 3 NJ 620 NJ 620 NJ
 preplace netloc rgb2dvi_0_TMDS 1 3 1 N
 preplace netloc display_timing_0_vs 1 1 2 NJ 290 N
 preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
-preplace netloc buttons_0_pause 1 1 2 380 320 630
-preplace netloc buttons_0_right 1 1 2 360 280 650
-preplace netloc clk_wiz_0_clk_out1 1 0 3 20 230 280 340 670
+preplace netloc buttons_0_pause 1 1 2 380 320 640
+preplace netloc buttons_0_right 1 1 2 360 280 660
+preplace netloc clk_wiz_0_clk_out1 1 0 3 20 230 280 340 680
 preplace netloc SNES_0_snesClock 1 1 3 NJ 640 NJ 640 NJ
 preplace netloc Net 1 0 2 20 720 300
-preplace netloc buttons_0_down 1 1 2 350 540 620
-preplace netloc display_timing_0_hs 1 1 2 NJ 310 660
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 550 320J 560 680J 610 1080
+preplace netloc buttons_0_down 1 1 2 350 540 630
+preplace netloc display_timing_0_hs 1 1 2 NJ 310 670
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 550 320J 560 690J 610 1090
 preplace netloc SNES_0_buttons 1 1 1 330
 preplace netloc display_timing_0_x 1 1 1 290
 preplace netloc showOnLED_0_leds 1 2 2 NJ 720 NJ
-preplace netloc display_timing_0_de 1 1 2 NJ 330 670
-levelinfo -pg 1 0 150 500 880 1110 -top 0 -bot 800
+preplace netloc display_timing_0_de 1 1 2 NJ 330 680
+levelinfo -pg 1 0 150 510 890 1120 -top 0 -bot 800
 ",
 }
 {

@@ -27,8 +27,9 @@ module buttons(clk, reset, buttons, left, right, up, down, pause);
     
     always@(posedge clk)
     begin
-        if(reset==1) pause <= 0;
-        if(pause==0)begin
+        if(reset==1) pause <= 0;    //bij reset terug doorgaan
+        if(pause==0)begin   //niet doorgeven als het op pauze staat
+            //laatste statement wint
             if (buttons[0] == 1 || buttons[5] == 1) begin // B of pijltje onder indrukken
                 down <= 1'b1; left <= 0; up <= 0; right <= 0;
             end
@@ -41,8 +42,8 @@ module buttons(clk, reset, buttons, left, right, up, down, pause);
             if (buttons[7] == 1 || buttons[8] == 1) begin// A of rechts
                 right <= 1'b1; left <= 0; up <= 0; down <= 0;
             end
-            if(buttons[2]==1) pause<=1;
-        end else if(buttons[3]==1) pause<=0;
+            if(buttons[2]==1) pause<=1;     //select = pause
+        end else if(buttons[3]==1) pause<=0; //start = continue
         
     end
         
